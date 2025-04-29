@@ -1,0 +1,18 @@
+a{
+    color: black !important;
+}
+
+a:hover
+{
+    color:blue !important ;
+}
+/* Style pour les liens de l'Espace Client et du Multilingue */
+.espace-client-link,
+.multilingue-link {
+    color: black !important;
+}
+
+.espace-client-link:hover,
+.multilingue-link:hover {
+    color: blue !important;
+}

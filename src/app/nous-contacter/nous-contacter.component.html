@@ -1,0 +1,91 @@
+<app-navbar></app-navbar>
+<div class="relative bg-cover bg-center h-[600px] rounded-lg overflow-hidden" style="background-image: url('https://www.haisoft.fr/images/page-contact.jpg')">
+  <div class="absolute inset-0 bg-black opacity-40"></div> <!-- Filtrage de l'image pour améliorer la lisibilité -->
+
+  <div class="relative z-10 text-white p-8 flex flex-col justify-between h-full">
+    <div class="ps-60">
+      <div class="flex justify-between w-36 mb-7">
+        <div class="LineBefore"></div>
+        <h1 class="text-4xl font-bold mb-6 leading-tight">
+          <span class="text-white font-normal">NOUS</span> <br>
+          <span class="text-yellow-500 font-semibold">CONTACTER</span>
+        </h1>
+      </div>
+      <p class="text-xl mb-3 leading-relaxed font-semibold w-64 text-wrap">
+        <span class="text-white" style="text-align: left; margin-top: 8em; margin-bottom: 3em;">Si vous êtes déjà client, vous pouvez nous contacter par ticket support dans l'espace client. Ce formulaire est réservé aux questions techniques ou commerciales avant vente.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Mention légale en bas -->
+  <div class="absolute bottom-0 left-0 right-0 bg-black opacity-60 text-center py-3">
+    <p class="text-white text-sm">Microsoft (CSP Partenaire)</p>
+  </div>
+</div>
+
+<div class="bg-white p-8 rounded-lg shadow-lg w-full flex">
+  <div class="formulaire" style="width: 60%;">
+    <mat-card class="" style="border-radius: 12px;border-top:7px solid #E47309;filter: drop-shadow(0 0 8px rgb(157, 157, 157));">
+      <mat-card-content class="flex justify-start items-center flex-col">
+        <h2 style="color: #E47309; width: 100%; text-align: center;font-size: 40px;">Formulaire de Contact</h2>
+        <form [formGroup]="userForm" (ngSubmit)="OnSubmit()" action="" class="flex justify-center items-start flex-col">
+          <div class="flex justify-center items-start flex-col w-full mb-5">
+            <label for="" style="font-weight: 500;font-size: 16px;margin-bottom: 10px;">Name *</label>
+            <input formControlName="nom" type="text" style="outline:1px solid #E47309;width: 90%;border-radius: 12px;height: 3rem;padding-left:10px ;font-size: 18px;" placeholder="Entrez Votre Nom">
+          </div>
+          <div class="flex justify-center items-start flex-col w-full mb-5">
+            <label for="" style="font-weight: 500;font-size: 16px;margin-bottom: 10px;">Societe *</label>
+            <input formControlName="societe" type="text" style="outline:1px solid #E47309;width: 90%;border-radius: 12px;height: 3rem;padding-left:10px ;font-size: 18px;" placeholder="Entrez Votre Nom de la Societe">
+          </div>
+          <div class="flex justify-center items-start flex-col w-full mb-5">
+            <label for="" style="font-weight: 500;font-size: 16px;margin-bottom: 10px;">E-mail *</label>
+            <input formControlName="email" type="text" style="outline:1px solid #E47309;width: 90%;border-radius: 12px;height: 3rem;padding-left:10px ;font-size: 18px;" placeholder="Entrez Votre E-mail">
+          </div>
+          <div class="flex justify-center items-start flex-col w-full mb-5">
+            <label for="" style="font-weight: 500;font-size: 16px;margin-bottom: 10px;">Telephone *</label>
+            <input formControlName="telephone" type="text" style="outline:1px solid #E47309;width: 90%;border-radius: 12px;height: 3rem;padding-left:10px ;font-size: 18px;" placeholder="Entrez Votre Numero de Telephone">
+          </div>
+          <div class="flex justify-center items-start flex-col w-full mb-5">
+            <label for="" style="font-weight: 500;font-size: 16px;margin-bottom: 10px;">Sujet *</label>
+            <select formControlName="sujet" name="" id="" style="outline:1px solid #E47309;width: 90%;border-radius: 12px;height: 3rem;padding-left:10px ;font-size: 18px;">
+              <option value="Demande de Renseignements">Demande de Renseignements</option>
+              <option value="Demande de Devis">Demande de Devis</option>
+              <option value="Aide à L'utilisation du site">Aide à L'utilisation du site</option>
+              <option value="Partenariat">Partenariat</option>
+              <option value="Presse">Presse</option>
+              <option value="Probleme Technique">Probleme Technique</option>
+              <option value="Remarque sur un Produit">Remarque sur un Produit</option>
+              <option value="Suivie de Commande">Suivie de Commande</option>
+            </select>
+          </div>
+          <div class="flex justify-center items-start flex-col w-full mb-5">
+            <label for="" style="font-weight: 500;font-size: 16px;margin-bottom: 10px;">Message *</label>
+            <textarea formControlName="message" rows="20" style="outline:1px solid #E47309;width: 90%;border-radius: 12px;padding-left:10px ;font-size: 18px;" placeholder="Entrez Votre Numero de Telephone"></textarea>
+          </div>
+          <button type="submit" style="background-color: #E47309;align-self: center;" class="hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full self-start mb-8 transition-all duration-300 ease-in-out transform hover:scale-105">
+            ENVOYER
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="coordonnees ms-14" style="width:30%">
+    <mat-card class="" style="border-radius: 12px;border-top:7px solid #E47309;filter: drop-shadow(0 0 8px rgb(157, 157, 157));">
+        <mat-card-content class="flex justify-start items-center flex-col">
+            <h2 style="color: #E47309; width: 100%; text-align: center;font-size: 40px;">Nos coordonnées</h2>
+            <!-- Conteneur pour centrer l'image -->
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQFFQN7-2r8QqA/profile-displayphoto-shrink_200_200/B4EZSOz5eFHgAY-/0/1737562757379?e=1747872000&v=beta&t=D0S_o5lNLG4BuNlCu-85i3aF1cFn8sDuPrGausyFCeE" 
+                     alt="Mehdi CHANNOUFI" 
+                     style="width: 100px; height: 100px; border-radius: 50%; margin: 20px 0;">
+            </div>
+            <h2> TIMSOFT :</h2>
+            <div class="flex-col flex justify-center items-start ps-4">
+                <p><span style="color: #E47309;">CONTACT : </span>Mehdi CHANNOUFI</p>
+                <p><span style="color: #E47309;">E-MAIL : </span>m.channoufi83&#64;gmail.com</p>
+                <p><span style="color: #E47309;">PHONE : </span>+216 29 793 953</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+</div>
