@@ -16,3 +16,29 @@ a:hover
 .multilingue-link:hover {
     color: blue !important;
 }
+/* Ensure the dropdown stays visible while hovering */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block; /* Make sure the dropdown is visible when hovering */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Optional: Add a slight delay to prevent disappearing too fast */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+}
